@@ -5,7 +5,8 @@ from pydantic import BaseModel
 
 load_dotenv()
 password = os.getenv("PASSWORD")
-id = f"mongodb+srv://Mycin:{password}@cluster0.yzel00n.mongodb.net"
+user = os.getenv("USER")
+id = f"mongodb+srv://{user}:{password}@cluster0.yzel00n.mongodb.net"
 conn = MongoClient(id)
 
 collection = conn.notes.notes
