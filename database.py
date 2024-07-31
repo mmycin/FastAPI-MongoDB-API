@@ -15,7 +15,7 @@ class Notes(BaseModel):
     id: str
     note: str
 
-def formatData(note) -> dict:
+def format_data(note) -> dict:
     return {
         "id": str(note["_id"]),
         "note": note["note"]
